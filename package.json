@@ -4,7 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "demo": "tsx src/demo.ts"
+    "demo": "tsx src/cli/demo.ts",
+    "verify": "tsx src/cli/verify.ts",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@langchain/langgraph": "^0.2.0"
