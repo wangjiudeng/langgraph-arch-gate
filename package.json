@@ -6,13 +6,42 @@
   "scripts": {
     "demo": "tsx src/cli/demo.ts",
     "verify": "tsx src/cli/verify.ts",
-    "typecheck": "tsc --noEmit"
+    "test": "node --import tsx --test tests/graph.test.ts",
+    "typecheck": "tsc --noEmit",
+    "ci": "npm run typecheck && npm test"
   },
   "dependencies": {
     "@langchain/langgraph": "^0.2.0"
   },
   "devDependencies": {
+    "@types/node": "^26.6.11",
     "tsx": "^4.19.0",
     "typescript": "^5.6.0"
+  },
+  "description": "把 AI 交付流水线的架构评审做成可暂停、可恢复、可追溯的 LangGraph 工作流",
+  "license": "MIT",
+  "author": {
+    "name": "王九登",
+    "email": "1452850583@qq.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wangjiudeng/langgraph-arch-gate.git"
+  },
+  "homepage": "https://github.com/wangjiudeng/langgraph-arch-gate#readme",
+  "bugs": {
+    "url": "https://github.com/wangjiudeng/langgraph-arch-gate/issues"
+  },
+  "keywords": [
+    "langgraph",
+    "agent",
+    "human-in-the-loop",
+    "checkpointer",
+    "interrupt",
+    "architecture-review",
+    "typescript"
+  ],
+  "engines": {
+    "node": ">=20"
   }
 }

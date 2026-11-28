@@ -1,4 +1,6 @@
 node_modules/
-docs/
+docs/plan.md
 *.log
 .DS_Store
+# CI 待带 workflow 权限的 token 后再入库
+.github/workflows/
